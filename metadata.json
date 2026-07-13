@@ -1,0 +1,17 @@
+{
+    "model_name": "AGF_beforeFT_ver1",
+    "description": "ECG-only emotion estimation student model (KD-Ensemble, alpha=1.0)",
+    "training_data": "2025 eating/drinking experiment, 100 subjects",
+    "ecg_n": 19,
+    "fs_ecg": 1000,
+    "window_sec": 30,
+    "hidden_units": 64,
+    "outputs": ["arousal", "valence"],
+    "features": [
+        "NNICounter", "HRMean", "NN20", "NN30", "NN50", "PNN50",
+        "fftPeakVLF", "fftPeakLF", "fftPeakHF",
+        "fftRelULF", "fftRelVLF", "fftRelLF", "fftRelHF",
+        "fftLogULF", "fftLogVLF", "fftNormLF",
+        "sampleEntropy", "poincareSD2", "poincareSDRatio"
+    ]
+}
